@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+body{
+display: flex;
+justify-content: center;
+justify-items: center;
+}
+
+    </style>
+    
+<div class="container">
+    <img src="dice-1.png" class="img1" alt="">
+    <img src="dice-2.png" class="img2" alt="">
+    <img src="dice-3.png" class="img3" alt="">
+    <img src="dice-4.png" class="img4" alt="">
+    <img src="dice-5.png" class="img5" alt="">
+    <img src="dice-6.png" class="img6" alt="">
+        <div id="score">0</div>
+    <button onclick="rollDice()">Click</button>
+</div>
+
+    <script>
+        function rollDice(){
+            let theNum= Math.trunc(Math.random()*6+1);
+            document.querySelector('#score').textContent=theNum;
+            if(theNum==1){
+
+               var theImg=document.querySelector('.img1');
+                theImg.src="dice-1.png";
+            }
+            
+        }
+
+</script>
+</body>
+</html>
