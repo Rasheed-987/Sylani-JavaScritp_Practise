@@ -15,42 +15,56 @@
             background-color: blueviolet;
         }
         .container{
+            
             padding: 94px 73px;
             border: 2px solid black;
-            display: flex;
-            flex-direction: column;
-            column-gap: 15px;
             font-size: 38px;
         }
         .new{
             display: flex;
+            justify-content: center;
+        }
+        .data{
+            display: flex;
         }
     </style>
     <div class="container">
-        <!-- <!-- <div class="theSecond">
-            second
-         </div> -->
          <div>
 
              <h4>Digital Clock</h4>
          </div>
          <div class="new">
-
-             <div class="theDay"> 
-                 day
-        </div>
-   
-        <div class="theDate">
-            date 
-        </div>
-        <div class="theMonth">
-            month
-        </div>
+            <div class="theHour">
+                Hours
+            </div>
+            
+                <div>:</div>
+                <div class="theMinute">
+                    Hours
+                </div>
+            
         
-        <div  class="theYear">
-            new
-        </div>
-    </div>
+        
+        
+            </div>
+            <div class="data">
+                
+                <div class="theDay"> 
+                    day
+                </div>
+                
+                <div class="theDate">
+                    date 
+                </div>
+                <div class="theMonth">
+                    month
+                </div>
+                
+                <div  class="theYear">
+                    new
+                </div>
+            </div>
+        
     </div>
     
     <script>
@@ -62,12 +76,19 @@
         let theDate=new Date().getDate();
         const theDay= new Date().getDay();
             const day=dayNames[theDay];
+            const theHour=new Date().getHours();
+            console.log(theHour);
+            const theMinute=new Date().getMinutes();
+
         // let theSecond= new Date().getSeconds();
         // document.querySelector(".theSecond").textContent=theSecond;
         document.querySelector(".theDate").textContent=theDate;
         document.querySelector(".theYear").textContent = theYear;
         document.querySelector(".theMonth").textContent=month;
         document.querySelector(".theDay").textContent=day;
+        document.querySelector(".theHour").textContent=theHour;
+        document.querySelector(".theMinute").textContent=theMinute;
+        
 
         </script>
 </body>
